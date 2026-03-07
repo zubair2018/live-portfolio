@@ -1,67 +1,66 @@
-// src/components/Contact.jsx
-import {FaInstagram,FaFacebook,FaYoutube,FaLinkedin,FaGithub,} from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaFacebook,
+  FaYoutube,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section className="py-16 px-5 bg-black text-white" id="contact">
-      <div className="max-w-xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold mb-4">Contact</h2>
-        <p className="text-slate-300 mb-6">
-          Want to collaborate or talk about your next project? Email me below!
-        </p>
+    <section
+      id="contact"
+      className="py-16 px-5 bg-gradient-to-b from-slate-950 to-black text-white"
+    >
+      <div className="max-w-4xl mx-auto text-center space-y-8">
+        <h2 className="text-3xl lg:text-4xl font-bold">
+          <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Let&apos;s Work
+          </span>
+          <span className="block text-white">Together</span>
+        </h2>
+
         <a
           href="mailto:your@email.com"
-          className="inline-block px-6 py-3 bg-indigo-500 text-white rounded-full font-bold hover:bg-indigo-600 transition mb-4"
+          className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 text-lg font-bold shadow-lg shadow-purple-500/40 hover:from-purple-600 hover:to-pink-600 transition"
         >
-          Email Me
+          Get in Touch
         </a>
-        {/* Social media icons below */}
-        <div className="flex justify-center gap-6 mt-6">
-          <a
-            href="https://instagram.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="hover:text-pink-500 text-4xl"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://facebook.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="hover:text-blue-600 text-4xl"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://youtube.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-            className="hover:text-red-600 text-4xl"
-          >
-            <FaYoutube />
-          </a>
-          <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="hover:text-blue-700 text-4xl"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="hover:text-gray-400 text-4xl"
-          >
-            <FaGithub />
-          </a>
+
+        <div className="pt-8">
+          <p className="text-slate-400 mb-6">Connect with me on social media</p>
+          <div className="flex justify-center gap-8">
+            <a
+              href="#"
+              className="text-purple-400 hover:text-purple-300 text-3xl transition"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="#"
+              className="text-blue-400 hover:text-blue-300 text-3xl transition"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="#"
+              className="text-red-500 hover:text-red-400 text-3xl transition"
+            >
+              <FaYoutube />
+            </a>
+            <a
+              href="#"
+              className="text-blue-500 hover:text-blue-400 text-3xl transition"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="#"
+              className="text-gray-400 hover:text-gray-300 text-3xl transition"
+            >
+              <FaGithub />
+            </a>
+          </div>
         </div>
       </div>
     </section>
