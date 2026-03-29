@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="py-6 text-center bg-slate-950 border-t border-slate-800 text-xs text-slate-500">
+    <footer className="border-t border-white/10 bg-slate-950 px-5 py-6 text-center text-sm text-slate-400">
       © {new Date().getFullYear()} Zubair Ahmad. All rights reserved.
     </footer>
   );

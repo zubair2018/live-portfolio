@@ -1,80 +1,41 @@
-// src/components/Hero.jsx
-
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-slate-900 to-slate-950 text-white"
+      className="relative overflow-hidden bg-slate-950 text-white"
     >
-      {/* Background glows */}
-      <div className="pointer-events-none absolute -top-40 -right-40 h-80 w-80 rounded-full bg-purple-600/40 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -left-32 h-72 w-72 rounded-full bg-pink-600/30 blur-3xl" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,70,239,0.18),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.16),transparent_30%)]" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 flex flex-col items-center text-center gap-8">
-        <span className="inline-flex items-center gap-2 rounded-full border border-purple-500/40 bg-purple-500/10 px-4 py-1 text-xs sm:text-sm text-purple-200">
-          <span className="h-2 w-2 rounded-full bg-purple-400 animate-pulse" />
-          Full‑Stack Web Designer
+      <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col items-center justify-center px-4 py-20 text-center sm:px-6 lg:px-8">
+        <span className="mb-5 inline-flex items-center rounded-full border border-fuchsia-400/30 bg-fuchsia-400/10 px-4 py-1 text-xs font-medium text-fuchsia-200 sm:text-sm">
+          Web Designer • MERN Developer • Content Creator
         </span>
 
-        <div>
-          <p className="mt-4 text-sm sm:text-base tracking-[0.2em] text-slate-300">
-            HELLO I&apos;M
-          </p>
-          <h1 className="mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-            <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              ZUBAIR
-            </span>
-            <span className="block text-white">AHMAD</span>
-          </h1>
-        </div>
+        <h1 className="max-w-4xl text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+          I build modern websites and create content that helps brands look
+          better, grow faster, and connect with people online.
+        </h1>
 
-        <p className="text-sm sm:text-base text-slate-300 max-w-xl">
-          I&apos;m a web designer and entrepreneur crafting sleek, responsive
-          websites that help brands stand out, tell their story, and convert
-          visitors into customers.
+        <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
+          I’m Zubair Ahmad — a web designer, developer, and part-time content
+          creator. I work on responsive websites, digital experiences, video
+          edits, and social content that make businesses stand out.
         </p>
 
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="/resume.pdf"
+            href="resume.docx"
             download
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm sm:text-base font-semibold shadow-lg shadow-purple-500/40 hover:from-purple-600 hover:to-pink-600 transition"
+            className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-fuchsia-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-fuchsia-600"
           >
             Download Resume
           </a>
           <a
-            href="#works"
-            className="inline-flex items-center justify-center rounded-full border border-slate-600 bg-slate-900/60 px-6 py-3 text-sm sm:text-base font-semibold text-slate-200 hover:border-purple-400 hover:text-purple-300 transition"
+            href="#contact"
+            className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-fuchsia-400/50 hover:text-fuchsia-300"
           >
-            View My Work
+            Let&apos;s Work Together
           </a>
-        </div>
-
-        {/* Stats */}
-        <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-sm sm:text-base">
-          <div>
-            <p className="text-xl sm:text-2xl font-bold text-purple-400">
-              50+
-            </p>
-            <p className="text-slate-400 text-xs sm:text-sm">Happy Clients</p>
-          </div>
-          <div>
-            <p className="text-xl sm:text-2xl font-bold text-purple-400">
-              80+
-            </p>
-            <p className="text-slate-400 text-xs sm:text-sm">
-              Completed Projects
-            </p>
-          </div>
-          <div>
-            <p className="text-xl sm:text-2xl font-bold text-purple-400">
-              3+
-            </p>
-            <p className="text-slate-400 text-xs sm:text-sm">
-              Years Experience
-            </p>
-          </div>
         </div>
       </div>
     </section>

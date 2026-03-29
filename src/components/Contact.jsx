@@ -1,3 +1,5 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   FaInstagram,
   FaFacebook,
@@ -7,61 +9,180 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
+  const formRef = useRef(null);
+  const [status, setStatus] = useState({ type: "", message: "" });
+  const [loading, setLoading] = useState(false);
+
+  const serviceId = "service_uvqc30b";
+  const templateId = "template_zuoq5hs";
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus({ type: "", message: "" });
+
+    emailjs.sendForm(serviceId, templateId, formRef.current, publicKey).then(
+      () => {
+        setLoading(false);
+        setStatus({
+          type: "success",
+          message: "Your message has been sent successfully.",
+        });
+        formRef.current.reset();
+      },
+      () => {
+        setLoading(false);
+        setStatus({
+          type: "error",
+          message: "Something went wrong. Please try again.",
+        });
+      }
+    );
+  };
+
   return (
-    <section
-      id="contact"
-      className="py-16 px-5 bg-gradient-to-b from-slate-950 to-black text-white"
-    >
-      <div className="max-w-4xl mx-auto text-center space-y-8">
-        <h2 className="text-3xl lg:text-4xl font-bold">
-          <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Let&apos;s Work
-          </span>
-          <span className="block text-white">Together</span>
-        </h2>
+    <section id="contact" className="bg-slate-900 px-5 py-16 text-white">
+      <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
+        <div>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-fuchsia-300">
+            Contact
+          </p>
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Let&apos;s build and create something strong
+          </h2>
+          <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">
+            Whether you need a website, a web app, edited content, or creative
+            digital support, send me a message here.
+          </p>
 
-        <a
-          href="mailto:your@email.com"
-          className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 text-lg font-bold shadow-lg shadow-purple-500/40 hover:from-purple-600 hover:to-pink-600 transition"
-        >
-          Get in Touch
-        </a>
-
-        <div className="pt-8">
-          <p className="text-slate-400 mb-6">Connect with me on social media</p>
-          <div className="flex justify-center gap-8">
+          <div className="mt-8 flex flex-wrap gap-5 text-2xl">
             <a
-              href="#"
-              className="text-purple-400 hover:text-purple-300 text-3xl transition"
+              href="https://www.instagram.com/glitchtrical?igsh=MTBhcnJ2aTNqM2hpNA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 transition hover:text-fuchsia-300"
+              aria-label="Instagram"
             >
               <FaInstagram />
             </a>
+
             <a
-              href="#"
-              className="text-blue-400 hover:text-blue-300 text-3xl transition"
+              href="https://www.facebook.com/share/1EQDgGpALZ/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 transition hover:text-fuchsia-300"
+              aria-label="Facebook"
             >
               <FaFacebook />
             </a>
+
             <a
-              href="#"
-              className="text-red-500 hover:text-red-400 text-3xl transition"
+              href="https://www.youtube.com/@mirzubair321"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 transition hover:text-fuchsia-300"
+              aria-label="YouTube"
             >
               <FaYoutube />
             </a>
+
             <a
-              href="#"
-              className="text-blue-500 hover:text-blue-400 text-3xl transition"
+              href="https://www.linkedin.com/in/zubair-ahmad-mir-45721b1bb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 transition hover:text-fuchsia-300"
+              aria-label="LinkedIn"
             >
               <FaLinkedin />
             </a>
+
             <a
-              href="#"
-              className="text-gray-400 hover:text-gray-300 text-3xl transition"
+              href="https://github.com/zubair2018"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 transition hover:text-fuchsia-300"
+              aria-label="GitHub"
             >
               <FaGithub />
             </a>
           </div>
         </div>
+
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="rounded-2xl border border-white/10 bg-white/5 p-6"
+        >
+          <div className="mb-4">
+            <label
+              htmlFor="from_name"
+              className="mb-2 block text-sm text-slate-300"
+            >
+              Name
+            </label>
+            <input
+              id="from_name"
+              name="from_name"
+              type="text"
+              required
+              className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition focus:border-fuchsia-400"
+              placeholder="Your name"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label
+              htmlFor="from_email"
+              className="mb-2 block text-sm text-slate-300"
+            >
+              Email
+            </label>
+            <input
+              id="from_email"
+              name="from_email"
+              type="email"
+              required
+              className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition focus:border-fuchsia-400"
+              placeholder="your@email.com"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label
+              htmlFor="message"
+              className="mb-2 block text-sm text-slate-300"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition focus:border-fuchsia-400"
+              placeholder="Tell me about your project"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-fuchsia-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-fuchsia-600 disabled:opacity-60"
+          >
+            {loading ? "Sending..." : "Send Message"}
+          </button>
+
+          {status.message && (
+            <p
+              className={`mt-4 text-sm ${
+                status.type === "success" ? "text-emerald-400" : "text-red-400"
+              }`}
+            >
+              {status.message}
+            </p>
+          )}
+        </form>
       </div>
     </section>
   );
