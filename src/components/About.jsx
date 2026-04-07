@@ -7,26 +7,19 @@ export default function About() {
             About Me
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            A creative mix of web development and content creation
+            I make websites and create content.
           </h2>
         </div>
 
-        <div className="space-y-4 text-sm leading-7 text-slate-300 sm:text-base">
+        <div className="space-y-4 text-sm leading-7 text-yellow-400 font-bold sm:text-base">
           <p>
-            I’m Zubair Ahmad, a web designer, MERN developer, and part-time
-            content creator who enjoys building strong digital identities for
-            brands, businesses, and personal projects.
+            I am Zubair Ahmad, a web developer and part-time content creator with a strong interest in building professional digital experiences.
           </p>
           <p>
-            My work is no longer only about websites. I also create and edit
-            content, shape visual storytelling, and use design, video, and
-            strategy together to help online presence feel more complete and
-            professional.
+            My work focuses on creating responsive websites, user-friendly interfaces, and well-crafted digital content that supports personal brands and businesses.
           </p>
           <p>
-            Whether it’s a modern portfolio, a business website, a logistics
-            project, a reel, or branded content, I like creating work that looks
-            good and performs with purpose.
+            I aim to deliver work that is visually clean, technically reliable, and aligned with clear communication and strong presentation.
           </p>
         </div>
       </div>

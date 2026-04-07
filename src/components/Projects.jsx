@@ -2,7 +2,7 @@ const projects = [
   {
     title: "Modern Portfolio",
     description:
-      "A modern personal portfolio built with React and Tailwind CSS to present work in a clean and professional way.",
+      "A professional portfolio website developed to present work, skills, and services in a clear and structured format.",
     tech: ["React", "Tailwind CSS"],
     github: "https://github.com/your-username/modern-portfolio",
     demo: "#",
@@ -10,7 +10,7 @@ const projects = [
   {
     title: "Sneaker Store",
     description:
-      "An e-commerce project with product browsing, shopping flow, and responsive UI for a better user experience.",
+      "An e-commerce interface designed to provide a smooth browsing experience with a clean and responsive layout.",
     tech: ["React", "Redux", "Stripe"],
     github: "https://github.com/your-username/sneaker-store",
     demo: "#",
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Shifty",
     description:
-      "A MERN logistics project for managing shipments, workflow, and transport-related operations in a structured way.",
+      "A MERN-based logistics platform created to manage workflow, operations, and shipment-related processes efficiently.",
     tech: ["MongoDB", "Express", "React", "Node.js"],
     github: "https://github.com/your-username/shifty",
     demo: "#",
@@ -34,7 +34,7 @@ export default function Projects() {
             Projects
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Selected development work
+            Selected Work
           </h2>
         </div>
 
@@ -47,7 +47,7 @@ export default function Projects() {
               <h3 className="text-xl font-semibold text-white">
                 {project.title}
               </h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">
+              <p className="mt-3 text-sm leading-7 text-yellow-400 ">
                 {project.description}
               </p>
 

@@ -51,7 +51,7 @@ export default function Contact() {
           <h2 className="text-3xl font-bold sm:text-4xl">
             Let&apos;s build and create something strong
           </h2>
-          <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">
+          <p className="mt-4 text-sm leading-7 text-yellow-400 sm:text-base">
             Whether you need a website, a web app, edited content, or creative
             digital support, send me a message here.
           </p>

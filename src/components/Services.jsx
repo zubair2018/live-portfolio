@@ -1,27 +1,27 @@
 const services = [
   {
-    title: "Web Design",
-    desc: "Modern, responsive, and clean website design focused on user experience and brand presence.",
+    title: "Web Development",
+    desc: "Responsive and modern websites built to deliver a professional and reliable user experience.",
   },
   {
-    title: "MERN Development",
-    desc: "Full-stack web applications using MongoDB, Express, React, and Node.js for real functionality.",
+    title: "Frontend Design",
+    desc: "Clean and structured interfaces designed with attention to usability, layout, and visual clarity.",
   },
   {
     title: "Content Creation",
-    desc: "Creative content ideas, branded storytelling, and engaging digital content for social platforms.",
+    desc: "Digital content developed to strengthen online presence and communicate ideas with clarity.",
   },
   {
     title: "Video Editing",
-    desc: "Short-form and promotional video editing with polished cuts, transitions, pacing, and visual flow.",
+    desc: "Short-form and promotional video editing with a focus on pacing, presentation, and consistency.",
   },
   {
-    title: "Creative Strategy",
-    desc: "Helping brands connect web presence and content style so everything feels aligned and professional.",
+    title: "Creative Support",
+    desc: "Practical support for personal brands and businesses across web presence, content, and digital presentation.",
   },
   {
-    title: "Thumbnail Design",
-    desc: "Eye-catching thumbnail and visual assets for YouTube, reels, and digital content promotion.",
+    title: "Visual Assets",
+    desc: "Professional thumbnails and supporting visuals created for social media, video platforms, and online branding.",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function Services() {
             Services
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            What I can help you with
+            Services I provide
           </h2>
         </div>
 
@@ -47,7 +47,7 @@ export default function Services() {
               <h3 className="text-xl font-semibold text-white">
                 {service.title}
               </h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">
+              <p className="mt-3 text-sm leading-7 text-yellow-400 ">
                 {service.desc}
               </p>
             </div>

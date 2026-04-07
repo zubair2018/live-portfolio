@@ -1,15 +1,15 @@
 const contentItems = [
   {
-    title: "Short-Form Video Editing",
-    text: "Editing reels, shorts, and social clips with clean pacing, engaging cuts, and better visual flow.",
+    title: "Short-Form Content",
+    text: "Professional editing for reels, shorts, and social media videos with clear structure and engaging presentation.",
   },
   {
-    title: "Content Branding",
-    text: "Creating content that matches the identity of a personal brand, business, or creator profile.",
+    title: "Brand-Focused Content",
+    text: "Content created to support personal branding, audience engagement, and a stronger digital presence.",
   },
   {
-    title: "DaVinci Resolve Workflow",
-    text: "Using DaVinci Resolve for editing, color cleanup, timing, and polished delivery for digital content.",
+    title: "Editing Workflow",
+    text: "DaVinci Resolve-based editing process focused on clean visuals, timing, and polished final delivery.",
   },
 ];
 
@@ -22,12 +22,10 @@ export default function ContentWork() {
             Content Creation
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Creative work beyond websites
+            Content work with a professional approach
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
-            Along with development, I also work as a part-time content creator,
-            combining editing, visual storytelling, and branding to make content
-            more engaging and professional.
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-yellow-400 sm:text-base">
+            In addition to development, I create content that is visually consistent, audience-focused, and aligned with professional digital presentation.
           </p>
         </div>
 
@@ -38,7 +36,7 @@ export default function ContentWork() {
               className="rounded-2xl border border-white/10 bg-white/5 p-6"
             >
               <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">
+              <p className="mt-3 text-sm leading-7 text-yellow-400">
                 {item.text}
               </p>
             </div>

@@ -5,11 +5,11 @@ const skills = [
   "Express.js",
   "MongoDB",
   "Tailwind CSS",
-  "UI/UX Design",
   "Responsive Design",
+  "UI Development",
   "DaVinci Resolve",
   "Video Editing",
-  "Content Strategy",
+  "Content Planning",
   "Thumbnail Design",
 ];
 
@@ -22,7 +22,7 @@ export default function Skills() {
             Skills
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Tools I use across web and content
+            Tools and skills I work with
           </h2>
         </div>
 
@@ -30,7 +30,7 @@ export default function Skills() {
           {skills.map((skill) => (
             <div
               key={skill}
-              className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-center text-sm font-medium text-slate-200 transition hover:border-fuchsia-400/40 hover:text-white"
+              className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-center text-sm font-medium text-yellow-400 transition hover:border-fuchsia-400/40 hover:text-white"
             >
               {skill}
             </div>
