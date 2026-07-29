@@ -8,7 +8,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="works" className="overflow-hidden bg-[#0a1020] px-5 py-24 text-white sm:px-8 lg:px-10">
+    <section id="works" className="overflow-hidden bg-[#0a1020] px-5 py-20 text-white sm:px-8 lg:px-10">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
