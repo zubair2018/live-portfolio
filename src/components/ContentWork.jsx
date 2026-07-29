@@ -1,46 +1,26 @@
 const contentItems = [
-  {
-    title: "Short-Form Content",
-    text: "Professional editing for reels, shorts, and social media videos with clear structure and engaging presentation.",
-  },
-  {
-    title: "Brand-Focused Content",
-    text: "Content created to support personal branding, audience engagement, and a stronger digital presence.",
-  },
-  {
-    title: "Editing Workflow",
-    text: "DaVinci Resolve-based editing process focused on clean visuals, timing, and polished final delivery.",
-  },
+  ["Short-form content", "Professional editing for reels, shorts, and social videos with a clean visual rhythm."],
+  ["Brand-focused stories", "Content designed to build recognition, create connection, and make your message stick."],
+  ["Editing workflow", "A thoughtful DaVinci Resolve process focused on pacing, polish, and a confident final cut."],
 ];
 
 export default function ContentWork() {
   return (
-    <section id="content" className="bg-slate-950 px-5 py-16 text-white">
+    <section id="content" className="bg-[#0a1020] px-5 py-24 text-white sm:px-8 lg:px-10">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-fuchsia-300">
-            Content Creation
-          </p>
-          <h2 className="text-3xl font-bold sm:text-4xl">
-            Content work with a professional approach
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-yellow-400 sm:text-base">
-            In addition to development, I create content that is visually consistent, audience-focused, and aligned with professional digital presentation.
-          </p>
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.35fr] lg:items-end">
+          <div>
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.26em] text-cyan-200">Beyond code</p>
+            <h2 className="mt-3 text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl">Stories that move.</h2>
+          </div>
+          <p className="max-w-xl text-base leading-8 text-slate-400">A strong online presence is more than a functional website. I also create visual content that helps brands remain clear, consistent, and compelling.</p>
         </div>
-
-        <div className="grid gap-5 md:grid-cols-3">
-          {contentItems.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6"
-            >
-              <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-yellow-400">
-                {item.text}
-              </p>
-            </div>
-          ))}
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {contentItems.map(([title, text]) => <article key={title} className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-7">
+            <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-fuchsia-400/10 blur-2xl" />
+            <h3 className="relative text-xl font-bold">{title}</h3>
+            <p className="relative mt-4 text-sm leading-7 text-slate-400">{text}</p>
+          </article>)}
         </div>
       </div>
     </section>
