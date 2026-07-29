@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="bg-[#070b18] px-5 py-24 text-white sm:px-8 lg:px-10">
+    <section id="about" className="bg-[#070b18] px-5 py-20 text-white sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div>
           <p className="font-mono text-xs font-medium uppercase tracking-[0.26em] text-cyan-200">About me</p>
