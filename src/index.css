@@ -60,3 +60,100 @@ section::before {
   color: transparent;
   animation: shimmer 7s linear infinite;
 }
+
+
+@keyframes sticker-bob {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(var(--sticker-rotate)); }
+  50% { transform: translate3d(0, -15px, 0) rotate(calc(var(--sticker-rotate) + 3deg)); }
+}
+@keyframes sticker-spin { to { transform: rotate(360deg); } }
+@keyframes sticker-wiggle {
+  0%, 100% { transform: rotate(-8deg) scale(1); }
+  50% { transform: rotate(5deg) scale(1.08); }
+}
+
+.sticker {
+  position: absolute;
+  z-index: 2;
+  user-select: none;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+.sticker-creative {
+  --sticker-rotate: -9deg;
+  top: 19%;
+  right: 7%;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 2px solid #0b1020;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  background: #d9f99d;
+  color: #101828;
+  font: 700 0.65rem/1 "DM Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform: rotate(var(--sticker-rotate));
+  animation: sticker-bob 6s ease-in-out infinite;
+}
+.sticker-spark { font-size: 1rem; color: #d946ef; }
+.sticker-orbit {
+  --sticker-rotate: 12deg;
+  right: 4%;
+  bottom: 17%;
+  display: flex;
+  height: 7.3rem;
+  width: 7.3rem;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 0.3rem;
+  border: 2px dashed rgba(255,255,255,.65);
+  border-radius: 999px;
+  background: rgba(13, 21, 43, .85);
+  color: #c4b5fd;
+  font: 700 0.62rem/1 "DM Mono", monospace;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  animation: sticker-bob 7s ease-in-out infinite -2s;
+}
+.sticker-note {
+  --sticker-rotate: -5deg;
+  right: 25%;
+  bottom: 9%;
+  display: flex;
+  gap: .55rem;
+  align-items: flex-start;
+  padding: .8rem .95rem;
+  border: 2px solid #fb7185;
+  background: #fdf2f8;
+  color: #831843;
+  font: 700 .65rem/1.35 "DM Mono", monospace;
+  text-transform: uppercase;
+  animation: sticker-bob 7.5s ease-in-out infinite -4s;
+}
+.sticker-arrow { font-size: 1.6rem; line-height: .7; }
+.sticker-star {
+  --sticker-rotate: 0deg;
+  top: 12%;
+  right: 34%;
+  color: #f0abfc;
+  font-size: 3.5rem;
+  line-height: 1;
+  text-shadow: 0 0 24px rgba(240, 171, 252, .65);
+  animation: sticker-wiggle 3.4s ease-in-out infinite;
+}
+.sticker-cursor {
+  --sticker-rotate: 7deg;
+  left: 5%;
+  bottom: 16%;
+  border: 2px solid #0b1020;
+  border-radius: .35rem;
+  padding: .7rem .8rem;
+  background: #67e8f9;
+  color: #0f172a;
+  font: 700 .6rem/1.25 "DM Mono", monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  animation: sticker-bob 6.5s ease-in-out infinite -1s;
+}
