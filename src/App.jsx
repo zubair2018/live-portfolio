@@ -7,18 +7,21 @@ import Projects from "./components/Projects";
 import ContentWork from "./components/ContentWork";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Reveal from "./components/Reveal";
 
 function App() {
   return (
     <>
       <Header />
       <Hero />
-      <About />
-      <Services />
-      <Skills />
-      <Projects />
-      <ContentWork />
-      <Contact />
+      <main>
+        <Reveal><About /></Reveal>
+        <Reveal delay={80}><Services /></Reveal>
+        <Reveal delay={80}><Skills /></Reveal>
+        <Reveal delay={80}><Projects /></Reveal>
+        <Reveal delay={80}><ContentWork /></Reveal>
+        <Reveal delay={80}><Contact /></Reveal>
+      </main>
       <Footer />
     </>
   );
