@@ -2,7 +2,7 @@ const skills = ["React", "JavaScript", "Node.js", "Express.js", "MongoDB", "Tail
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-[#070b18] px-5 py-24 text-white sm:px-8 lg:px-10">
+    <section id="skills" className="bg-[#070b18] px-5 py-20 text-white sm:px-8 lg:px-10">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <p className="font-mono text-xs font-medium uppercase tracking-[0.26em] text-cyan-200">Toolkit</p>
