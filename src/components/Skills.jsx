@@ -1,15 +1,40 @@
-const skills = ["React", "JavaScript", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Responsive Design", "UI Development", "DaVinci Resolve", "Video Editing", "Content Planning", "Thumbnail Design"];
+const skills = [
+  "React",
+  "JavaScript",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Tailwind CSS",
+  "Responsive Design",
+  "UI Development",
+  "DaVinci Resolve",
+  "Video Editing",
+  "Content Planning",
+  "Thumbnail Design",
+];
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-[#070b18] px-5 py-20 text-white sm:px-8 lg:px-10">
+    <section id="skills" className="bg-slate-950 px-5 py-16 text-white">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-12 text-center">
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.26em] text-cyan-200">Toolkit</p>
-          <h2 className="mt-3 text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl">Fluent in the details.</h2>
+        <div className="mb-10 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-fuchsia-300">
+            Skills
+          </p>
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Tools and skills I work with
+          </h2>
         </div>
-        <div className="flex flex-wrap justify-center gap-3">
-          {skills.map((skill, index) => <span key={skill} className="rounded-full border border-white/10 bg-white/[0.035] px-5 py-3 text-sm font-semibold text-slate-300 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100" style={{ transitionDelay: `${index * 20}ms` }}>{skill}</span>)}
+
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          {skills.map((skill) => (
+            <div
+              key={skill}
+              className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-center text-sm font-medium text-yellow-400 transition hover:border-fuchsia-400/40 hover:text-white"
+            >
+              {skill}
+            </div>
+          ))}
         </div>
       </div>
     </section>
