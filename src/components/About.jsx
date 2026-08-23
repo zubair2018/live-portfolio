@@ -1,26 +1,50 @@
+const focusItems = [
+  "Responsive web development",
+  "Modern frontend interfaces",
+  "Short-form video editing",
+  "Creator-focused digital content",
+];
+
 export default function About() {
   return (
-    <section id="about" className="bg-slate-950 px-5 py-16 text-white">
-      <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 md:items-start">
+    <section id="about" className="bg-[#0b0b0d] px-5 py-20 text-white sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-fuchsia-300">
-            About Me
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-400">
+            About / Now
           </p>
-          <h2 className="text-3xl font-bold sm:text-4xl">
-            I make websites and create content.
+
+          <h2 className="mt-4 text-4xl font-black leading-tight tracking-[-0.04em] text-white sm:text-5xl">
+            Building useful things with a creative edge.
           </h2>
         </div>
 
-        <div className="space-y-4 text-sm leading-7 text-yellow-400 font-bold sm:text-base">
-          <p>
-            I am Zubair Ahmad, a web developer and part-time content creator with a strong interest in building professional digital experiences.
+        <div>
+          <p className="max-w-2xl text-lg leading-8 text-zinc-300">
+            I am Zubair Ahmad, a web developer and part-time content creator.
+            I combine development, design thinking, and visual storytelling to
+            create stronger digital experiences.
           </p>
-          <p>
-            My work focuses on creating responsive websites, user-friendly interfaces, and well-crafted digital content that supports personal brands and businesses.
+
+          <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-400">
+            My work focuses on modern websites, frontend interfaces, short-form
+            content, and digital assets that help people and brands present
+            themselves with clarity and confidence online.
           </p>
-          <p>
-            I aim to deliver work that is visually clean, technically reliable, and aligned with clear communication and strong presentation.
-          </p>
+
+          <div className="mt-9 grid gap-3 sm:grid-cols-2">
+            {focusItems.map((item, index) => (
+              <div
+                key={item}
+                className="flex items-center gap-3 border-t border-white/10 py-4 text-sm font-semibold text-zinc-200"
+              >
+                <span className="font-mono text-xs text-orange-400">
+                  0{index + 1}
+                </span>
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

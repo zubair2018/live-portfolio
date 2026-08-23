@@ -1,57 +1,106 @@
+import {
+  FaCode,
+  FaDesktop,
+  FaFilm,
+  FaPencilAlt,
+  FaShapes,
+  FaVideo,
+} from "react-icons/fa";
+
 const services = [
   {
+    number: "01",
     title: "Web Development",
-    desc: "Responsive and modern websites built to deliver a professional and reliable user experience.",
+    description:
+      "Responsive websites and web interfaces built for performance, clarity, and real-world use.",
+    icon: FaCode,
   },
   {
+    number: "02",
     title: "Frontend Design",
-    desc: "Clean and structured interfaces designed with attention to usability, layout, and visual clarity.",
+    description:
+      "Modern, structured interfaces focused on usability, layout, and a polished visual experience.",
+    icon: FaDesktop,
   },
   {
+    number: "03",
     title: "Content Creation",
-    desc: "Digital content developed to strengthen online presence and communicate ideas with clarity.",
+    description:
+      "Digital content developed to support online presence and meaningful audience engagement.",
+    icon: FaPencilAlt,
   },
   {
+    number: "04",
     title: "Video Editing",
-    desc: "Short-form and promotional video editing with a focus on pacing, presentation, and consistency.",
+    description:
+      "Short-form edits and promotional videos with clean pacing, structure, and professional delivery.",
+    icon: FaVideo,
   },
   {
-    title: "Creative Support",
-    desc: "Practical support for personal brands and businesses across web presence, content, and digital presentation.",
+    number: "05",
+    title: "Creator Support",
+    description:
+      "Practical creative support for personal brands across content, web presence, and digital identity.",
+    icon: FaFilm,
   },
   {
+    number: "06",
     title: "Visual Assets",
-    desc: "Professional thumbnails and supporting visuals created for social media, video platforms, and online branding.",
+    description:
+      "Thumbnails and supporting visuals designed for content platforms, campaigns, and creator workflows.",
+    icon: FaShapes,
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="bg-slate-900 px-5 py-16 text-white">
+    <section
+      id="services"
+      className="border-y border-white/10 bg-[#141417] px-5 py-20 text-white sm:px-6 lg:px-8"
+    >
       <div className="mx-auto max-w-6xl">
-        <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-fuchsia-300">
-            Services
+        <div className="mb-12 max-w-2xl">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-400">
+            What I Do
           </p>
-          <h2 className="text-3xl font-bold sm:text-4xl">
-            Services I provide
+
+          <h2 className="mt-3 text-4xl font-black tracking-[-0.04em] text-white sm:text-5xl">
+            Digital work with purpose.
           </h2>
+
+          <p className="mt-4 text-base leading-8 text-zinc-400">
+            Development and content services built around clear communication,
+            modern execution, and a strong online presence.
+          </p>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-fuchsia-400/40 hover:bg-white/[0.07]"
-            >
-              <h3 className="text-xl font-semibold text-white">
-                {service.title}
-              </h3>
-              <p className="mt-3 text-sm leading-7 text-yellow-400 ">
-                {service.desc}
-              </p>
-            </div>
-          ))}
+        <div className="grid border-l border-t border-white/10 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => {
+            const Icon = service.icon;
+
+            return (
+              <article
+                key={service.title}
+                className="group min-h-[260px] border-b border-r border-white/10 bg-[#141417] p-6 transition hover:bg-[#1b1b20]"
+              >
+                <div className="flex items-start justify-between">
+                  <span className="font-mono text-xs font-bold text-orange-400">
+                    {service.number}
+                  </span>
+
+                  <Icon className="text-lg text-zinc-500 transition group-hover:text-orange-400" />
+                </div>
+
+                <h3 className="mt-12 text-xl font-bold tracking-tight text-white">
+                  {service.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-7 text-zinc-400">
+                  {service.description}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -8,20 +8,22 @@ import ContentWork from "./components/ContentWork";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Skills />
-      <Projects />
-      <ContentWork />
-      <Contact />
+
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Skills />
+        <Projects />
+        <ContentWork />
+        <Contact />
+      </main>
+
       <Footer />
     </>
   );
 }
-
-export default App;
